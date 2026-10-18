@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: block-dungeon-mp
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    autoDeploy: true
